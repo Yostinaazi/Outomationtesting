@@ -21,7 +21,7 @@ public class registratio {
     WebDriverManager.chromedriver().setup();
 
 }
-@And("user go to demo home page to login")
+@And("user go to demo home page")
     public void Home_page()
 {
     drive=new ChromeDriver();
@@ -41,7 +41,7 @@ public class registratio {
     {
    drive.findElement(By.cssSelector("input[id^=\"FirstName\"]")).sendKeys("yostena");
         drive.findElement(By.cssSelector("input[id^=\"LastName\"]")).sendKeys("aziz");
-        drive.findElement(By.cssSelector("input[id^=\"Email\"]")).sendKeys("yostena8@yahoo.com");
+        drive.findElement(By.cssSelector("input[id^=\"Email\"]")).sendKeys("yost74ena8@yahoo.com");
     }
     @And  ("user enter vaild Password")
     public void vaild_password()
@@ -66,6 +66,6 @@ public class registratio {
     @And ("user quit chrome at end")
     public void quit_driver()
     {
-      //  drive.quit();
+        drive.quit();
     }
 }

@@ -1,3 +1,4 @@
+@project
 Feature: user can logout with new account
   Scenario: user can log out with new account
     Given user open chrome browser
@@ -8,3 +9,4 @@ Feature: user can logout with new account
     And  user click in register button
     Then user register with valid account
     And user quit chrome at end
+
