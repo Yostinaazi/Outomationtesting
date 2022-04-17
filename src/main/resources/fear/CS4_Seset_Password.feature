@@ -4,4 +4,6 @@
       And user click in login
       When user writer Email
       And user click on link ForgetPassword
-      And user quit chrome at end
+      And user writer Email
+      And user click on Recover button
+  Then ensure the message of sending an email is found
