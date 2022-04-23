@@ -1,0 +1,3 @@
+file:src/main/resources/fear/SC10_add_products%20_Wishlist.feature:3
+file:src/main/resources/fear/CS5_change_currency.feature:3
+file:src/main/resources/fear/SC7_filter_with_color.feature:3
