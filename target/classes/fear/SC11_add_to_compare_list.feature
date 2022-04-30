@@ -8,3 +8,5 @@ Feature: SC11- Logged user could add different products to compare list
     And user choose Sub_category
     And  user choose item
     And user select size
+    And user click on Add to compare list
+    Then message of adding to compare list
