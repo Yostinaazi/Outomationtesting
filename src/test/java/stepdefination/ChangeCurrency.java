@@ -14,7 +14,7 @@ public class ChangeCurrency {
     public void user_change_currency()
     {
         //curency=Select(drive.findElement(By.id("customerCurrency")));
-        curency=new Select(Hooks.drive.findElement(By.cssSelector("a[class@")));
+        curency=new Select(Hooks.drive.findElement(By.id("customerCurrency")));
  //  curncy.selectByVisibleText("Euro");
         curency.selectByIndex(1);
     }

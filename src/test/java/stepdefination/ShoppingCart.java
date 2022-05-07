@@ -8,7 +8,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ShoppingCart {
     @And("user choose item")
-   public void user_choose_item() {
+   public void user_choose_item()
+    {
         Hooks.drive.findElement(By.xpath("//div[@class=\"details\"]//h2[@class=\"product-title\"]//a[@href=\"/adidas-consortium-campus-80s-running-shoes\"]")).click();
     }
     @And ("add to card")

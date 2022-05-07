@@ -1,5 +1,5 @@
 @project
-Feature: SC2- User could log in with valid email and password
+Feature: User could log in with valid email and password
 
   Scenario:user can login in with vaild data
     And user click in login

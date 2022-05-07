@@ -9,7 +9,7 @@ public class User_Email {
 
         public void Email(WebDriver driv)
         {
-             driv.findElement(By.id("Email")).sendKeys("Yostena47ziz@yahoo.com");
+             driv.findElement(By.id("Email")).sendKeys("Yosten4361iz@yahoo.com");
         }
 
     }
