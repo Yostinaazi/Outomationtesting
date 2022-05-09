@@ -1,5 +1,5 @@
 @project
-  Feature: SC9- Logged user could add different products to Shopping cart
+  Feature:09 Logged user could add different products to Shopping cart
     Scenario: SC9- Logged user could add different products to Shopping cart
       Given user click in login
       And user enter valid email and Password

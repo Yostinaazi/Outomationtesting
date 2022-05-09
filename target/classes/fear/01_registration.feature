@@ -1,5 +1,5 @@
 @project
-Feature: user can logout with new account
+Feature: 01 user can logout with new account
   Scenario: user can log out with new account
 
 #    And user go to demo home page

@@ -1,5 +1,5 @@
 @project
-  Feature: SC10_add_products _Wishlist
+  Feature:10 SC10_add_products _Wishlist
     Scenario:SC10_add_products _Wishlist
       Given user click in login
       And user enter valid email and Password
@@ -9,4 +9,4 @@
       And  user choose item
       And user select size
       And user select WishList
-      Then message of adding to wishlist apper
+      Then message of adding to wishlist appear

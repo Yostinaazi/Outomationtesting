@@ -1,5 +1,5 @@
  @project
-  Feature:Logged User could switch between currencies US-to_Euro
+  Feature:05 Logged User could switch between currencies US-to_Euro
      Scenario:Logged User could switch between currencies US-Euro
 
          And user click in login

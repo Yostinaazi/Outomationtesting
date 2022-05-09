@@ -1,5 +1,5 @@
 @project
-  Feature: SC7- Logged user could filter with color
+  Feature:07  Logged user could filter with color
     Scenario: SC7- Logged user could filter with color
       Given user click in login
       And user choose category

@@ -1,5 +1,5 @@
 @project
-Feature: SC6- Logged user could select different Categories
+Feature:06 Logged user could select different Categories
   Scenario: SC6- Logged user could select different Categories
     And user click in login
     And user enter valid email and Password

@@ -1,5 +1,5 @@
 @project
-  Feature: User could reset his/her password successfully
+  Feature:03  User could reset his/her password successfully
     Scenario: reset Password
       And user click in login
       When user writer Email

@@ -1,5 +1,5 @@
 @project
-  Feature: SC8- Logged user could select different tags
+  Feature:08  Logged user could select different tags
     Scenario: SC8- Logged user could select different tags
       Given user click in login
       And user choose category

@@ -19,10 +19,10 @@ public class Hooks {
         drive.manage().window().maximize();
         drive.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
-//    @After
-//    public static void Quit()
-//    {
-//        drive.quit();
-//    }
+    @After
+    public static void Quit()
+    {
+        drive.quit();
+    }
 
 }

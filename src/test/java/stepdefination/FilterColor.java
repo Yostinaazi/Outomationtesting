@@ -16,6 +16,6 @@ Hooks.drive.findElement(By.cssSelector("img[alt=\"Picture for category Shoes\"][
     @Then("user can choose his favorite color")
     public void user_can_choose_his_favorite_color()
     {
-        Assert.assertEquals(Hooks.drive.findElement(By.cssSelector("span[style=\"background-color:#8a97a8\"]")),"8a97a8");
+        Assert.assertEquals("8a97a8",Hooks.drive.findElement(By.cssSelector("span[style=\"background-color:#8a97a8\"]")));
     }
 }
