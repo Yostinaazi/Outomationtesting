@@ -1,13 +1,12 @@
 package stepdefination;
 
 import io.cucumber.java.en.And;
-import org.openqa.selenium.By;
-
+import pages.Category_page;
 public class Categories {
-
+Category_page category=new Category_page();
     @And("user choose category")
     public void user_choose_category()
     {
-        Hooks.drive.findElement(By.linkText("Apparel")).click();
+        category.category(Hooks.drive);
     }
 }

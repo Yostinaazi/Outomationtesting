@@ -5,18 +5,13 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
+import pages.Category_page;
 public class ChangeCurrency {
-   // WebDriver drive=new ChromeDriver();
-
-   Select curency;
+    Category_page Category=new Category_page();
     @When("user change currency")
     public void user_change_currency()
     {
-        //curency=Select(drive.findElement(By.id("customerCurrency")));
-        curency=new Select(Hooks.drive.findElement(By.id("customerCurrency")));
- //  curncy.selectByVisibleText("Euro");
-        curency.selectByIndex(1);
+       Category.currency(Hooks.drive);
     }
     @Then("website prices should be with Eruo")
 

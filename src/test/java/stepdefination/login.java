@@ -1,5 +1,6 @@
-package stepdefination;
 
+package stepdefination;
+import pages.loginpage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,18 +13,13 @@ import org.testng.asserts.SoftAssert;
 
 import java.util.concurrent.TimeUnit;
 
+
 public class login {
 
-   User_Email mail=new User_Email();
+  // User_Email mail=new User_Email();
+   loginpage loginpom=new loginpage();
 
-//    @Given("user open chrome browser to log in")
-//    public void user_open_chrome_browser_to_login() {
-//        WebDriverManager.chromedriver().setup();
-//        drive=new ChromeDriver();
-//        drive.navigate().to("https://demo.nopcommerce.com/");
-//        drive.manage().window().maximize();
-//       // throw new io.cucumber.java.PendingException();
-//    }
+
     @And("user click in login")
         public void user_click_in_login()
         {
@@ -32,14 +28,14 @@ public class login {
     @When("user enter valid email and Password")
     public void user_enter_valid_email_and_Password()
     {
-      mail.Email(Hooks.drive);
-      //  drive.findElement(By.id("Email")).sendKeys("yosu4@yahoo.com");
-        Hooks.drive.findElement(By.id("Password")).sendKeys("45454545");
+
+        loginpom.Email(Hooks.drive);
+        loginpom.Password(Hooks.drive);
     }
     @And ("user click on button log in")
     public void user_click_on_button_log_in()
     {
-        Hooks.drive.findElement(By.cssSelector("button[class=\"button-1 login-button\"]")).click();
+        loginpom.loginbutton(Hooks.drive);
     }
     @Then("user log in succefuly")
     public void user_log_in_succefuly()

@@ -8,5 +8,5 @@ Feature: 01 user can logout with new account
     And  user enter vaild Password
     And  user click in register button
     Then user register with valid account
-    And user quit chrome at end
-
+#    And user quit chrome at end
+#

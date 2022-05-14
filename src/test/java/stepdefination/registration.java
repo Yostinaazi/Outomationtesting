@@ -5,19 +5,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.testng.asserts.SoftAssert;
+import pages.registration_page;
 
 public class registration {
-    User_Email pas=new User_Email();
-   // WebDriver drive;
+     User_Email pas=new User_Email();
+     registration_page regstration=new registration_page();
 
-@And("user go to demo home page")
-    public void Home_page()
-{
-
-    Hooks.drive.navigate().to("https://demo.nopcommerce.com/");
-   // drive.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
-
-}
 
     @And("click at Register link")
     public void click_register()
@@ -28,17 +21,15 @@ public class registration {
     @When("user enter valid mandatory personal details")
     public void user_enter_mandatory_field()
     {
-   Hooks.drive.findElement(By.cssSelector("input[id^=\"FirstName\"]")).sendKeys("yostena");
-        Hooks.drive.findElement(By.cssSelector("input[id^=\"LastName\"]")).sendKeys("aziz");
-      //  drive.findElement(By.cssSelector("input[id^=\"Email\"]")).sendKeys("yosu4@yahoo.com");
-        pas.Email(Hooks.drive);
+        regstration.first_name(Hooks.drive);
+        regstration.last_name(Hooks.drive);
+        regstration.email(Hooks.drive);
     }
     @And  ("user enter vaild Password")
     public void vaild_password()
     {
-        Hooks.drive.findElement(By.id("Password")).sendKeys("45454545");
-        Hooks.drive.findElement(By.id("ConfirmPassword")).sendKeys("45454545");
-
+        regstration.Pass_word(Hooks.drive);
+        regstration.conferm_pass(Hooks.drive);
     }
     @And  ("user click in register button")
     public void register_buton()

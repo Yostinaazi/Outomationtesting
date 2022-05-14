@@ -5,11 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class User_Email {
-    WebDriver driv;
+   // WebDriver driv;
 
         public void Email(WebDriver driv)
         {
-             driv.findElement(By.id("Email")).sendKeys("Yoste454361iz@yahoo.com");
         }
 
     }

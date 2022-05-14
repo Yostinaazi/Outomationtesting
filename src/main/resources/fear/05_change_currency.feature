@@ -5,5 +5,5 @@
          And user click in login
          And user enter valid email and Password
          And user click on button log in
-          When  user change currency
+         When  user change currency
          Then website prices should be with Eruo
