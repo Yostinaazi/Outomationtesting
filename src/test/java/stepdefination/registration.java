@@ -5,11 +5,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.testng.asserts.SoftAssert;
-import pages.registration_page;
+import pages.Registration_page;
 
 public class registration {
      User_Email pas=new User_Email();
-     registration_page regstration=new registration_page();
+     Registration_page regstration=new Registration_page();
 
 
     @And("click at Register link")

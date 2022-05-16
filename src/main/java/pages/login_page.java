@@ -4,11 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
-public class loginpage {
+public class login_page {
 
     public void Email(WebDriver drive)
     {
-        drive.findElement(By.id("Email")).sendKeys("Yoste454361iz@yahoo.com");
+        drive.findElement(By.id("Email")).sendKeys("Yostena1@yahoo.com");
 
     }
     public void Password(WebDriver drive)

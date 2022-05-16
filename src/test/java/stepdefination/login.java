@@ -1,23 +1,17 @@
 
 package stepdefination;
-import pages.loginpage;
+import pages.login_page;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.asserts.SoftAssert;
-
-import java.util.concurrent.TimeUnit;
 
 
 public class login {
 
   // User_Email mail=new User_Email();
-   loginpage loginpom=new loginpage();
+   login_page loginpom=new login_page();
 
 
     @And("user click in login")

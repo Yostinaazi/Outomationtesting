@@ -4,13 +4,15 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-
+import pages.Sub_Category_page;
+import pages.Item_Page;
 public class CompareList {
+    Sub_Category_page Sub_category= new Sub_Category_page();
+    Item_Page item=new Item_Page();
     @And("user click on Add to compare list")
         public void Add_to_compare_list()
         {
-            Hooks.drive.findElement(By.cssSelector("div[class=\"compare-products\"]")).click();
-
+            item.Add_to_copmparelist(Hooks.drive);
         }
 
     @Then("message of adding to compare list")

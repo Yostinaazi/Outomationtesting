@@ -1,57 +1,77 @@
 package stepdefination;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
-
+import pages.Item_Page;
+import pages.Cart_page;
+import pages.Check_out_billing_page;
+import pages.CheckOut_Shipping_method_page;
+import pages.CheckOut_Payment_method_page;
+import pages.CheckOut_payment_info_Page;
+import pages.ChechOut_confirm_order_page;
 public class successfulOrder {
-    Select cuntry;
-    Select StateC;
+    Item_Page item=new Item_Page();
+    Cart_page cart_page=new Cart_page();
+    Check_out_billing_page billing=new Check_out_billing_page();
+    CheckOut_Shipping_method_page Shipping_method=new CheckOut_Shipping_method_page();
+    CheckOut_Payment_method_page payment_method=new CheckOut_Payment_method_page();
+    CheckOut_payment_info_Page payment_info=new CheckOut_payment_info_Page();
+    ChechOut_confirm_order_page confirm=new ChechOut_confirm_order_page();
         @And ("go to card")
-    public void go_to_card() {
-            Hooks.drive.findElement(By.id("topcartlink")).click();
+    public void go_to_card()
+        {
+          item.Shopping_cart(Hooks.drive);
         }
     @And ("user click on check box read terms")
     public void check_box_read_terms()
     {
-        Hooks.drive.findElement(By.id("termsofservice")).click();
+        cart_page.read_terms(Hooks.drive);
     }
     @And ("user click on CHECK OUT")
 
     public void click_on_CHECK_OUT()
     {
-        Hooks.drive.findElement(By.id("checkout")).click();
+        cart_page.Check_out_button(Hooks.drive);
     }
     @And  ("user fill Billing address")
-    public void Billing_address()
+    public void Billing()
     {
-        cuntry =  new Select(Hooks.drive.findElement(By.id("BillingNewAddress_CountryId")));
-        cuntry.selectByIndex(1);
-        StateC =  new Select(Hooks.drive.findElement(By.id("BillingNewAddress_CountryId")));
-        StateC.selectByIndex(5);
-        Hooks.drive.findElement(By.id("BillingNewAddress_City")).sendKeys("kintaky");
-        Hooks.drive.findElement(By.id("BillingNewAddress_Address1")).sendKeys("30 time street");
-        Hooks.drive.findElement(By.id("BillingNewAddress_ZipPostalCode")).sendKeys("03");
-        Hooks.drive.findElement(By.id("BillingNewAddress_PhoneNumber")).sendKeys("0960656565");
-        Hooks.drive.findElement(By.name("save")).click();
+        billing.country(Hooks.drive);
+       billing.State(Hooks.drive);
+        billing.City(Hooks.drive);
+        billing.address(Hooks.drive);
+        billing.Zip_code(Hooks.drive);
+        billing.Phone_number(Hooks.drive);
+        billing.continue_button(Hooks.drive);
+
     }
     @And ("user choose Shipping method")
     public void Shipping_method()
     {
-        Hooks.drive.findElement(By.cssSelector("button[class=\"button-1 shipping-method-next-step-button\"]")).click();
+        Shipping_method.Continue_buton(Hooks.drive);
     }
     @And  ("user choose Payment method")
     public void Payment_method()
     {
-        Hooks.drive.findElement(By.name("save")).click();
+payment_method.Payment_continue_button(Hooks.drive);
     }
-
-    public void re()
+   @And ("user click continue after reading Payment Info")
+    public void Payment_info()
 {
-    Hooks.drive.findElement(By.cssSelector("button[class=\"button-1 shipping-method-next-step-button\"]")).click();
-
-    Hooks.drive.findElement(By.cssSelector("button[class=\"button-1 payment-info-next-step-button\"]"));
+payment_info.payment_info_continue_button(Hooks.drive);
 }
+    @And ("user click on confirm")
+    public void confirm()
+    {
+       confirm.confirm_continue_button(Hooks.drive);
+    }
+    @Then("message 'Your order has been successfully processed!' appear")
+    public void successfully()
+    {
+
+    }
 
     }
 

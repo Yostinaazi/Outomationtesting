@@ -1,9 +1,9 @@
 package stepdefination;
 
 import io.cucumber.java.en.And;
-import pages.Category_page;
+import pages.Home_page;
 public class Categories {
-Category_page category=new Category_page();
+Home_page category=new Home_page();
     @And("user choose category")
     public void user_choose_category()
     {

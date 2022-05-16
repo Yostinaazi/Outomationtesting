@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="10" time="133.361">
-<testcase classname="01 user can logout with new account" name="user can log out with new account" time="11.797">
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="12" time="185.194">
+<testcase classname="01 user can logout with new account" name="user can log out with new account" time="12.608">
 <system-out><![CDATA[And click at Register link..................................................passed
 When user enter valid mandatory personal details............................passed
 And user enter vaild Password...............................................passed
 And user click in register button...........................................passed
 Then user register with valid account.......................................passed
-And user quit chrome at end.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="02 User could log in with valid email and password" name="user can login in with vaild data" time="9.595">
+<testcase classname="02 User could log in with valid email and password" name="user can login in with vaild data" time="9.34">
 <system-out><![CDATA[And user click in login.....................................................passed
 When user enter valid email and Password....................................passed
 And user click on button log in.............................................passed
@@ -17,16 +16,24 @@ Then user log in succefuly..................................................pass
 And user quit chrome at end.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="03  User could reset his/her password successfully" name="reset Password" time="9.475">
+<testcase classname="03  User could reset his/her password successfully" name="reset Password" time="9.698">
 <system-out><![CDATA[And user click in login.....................................................passed
 When user writer Email......................................................passed
 And user click on link ForgetPassword.......................................passed
-And user writer Email.......................................................passed
+And user Rewriter Email.....................................................passed
 And user click on Recover button............................................passed
 Then ensure the message of sending an email is found........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="05 Logged User could switch between currencies US-to_Euro" name="Logged User could switch between currencies US-Euro" time="9.982">
+<testcase classname="03 Search of product" name="Search of product" time="9.839">
+<system-out><![CDATA[Given user click in login...................................................passed
+And user enter valid email and Password.....................................passed
+And user click on button log in.............................................passed
+When user choose category...................................................passed
+And user choose Sub_category................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="05 Logged User could switch between currencies US-to_Euro" name="Logged User could switch between currencies US-Euro" time="11.382">
 <system-out><![CDATA[And user click in login.....................................................passed
 And user enter valid email and Password.....................................passed
 And user click on button log in.............................................passed
@@ -34,37 +41,37 @@ When user change currency...................................................pass
 Then website prices should be with Eruo.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="06 Logged user could select different Categories" name="SC6- Logged user could select different Categories" time="9.882">
+<testcase classname="06 Logged user could select different Categories" name="SC6- Logged user could select different Categories" time="11.18">
 <system-out><![CDATA[And user click in login.....................................................passed
 And user enter valid email and Password.....................................passed
 And user click on button log in.............................................passed
 When user choose category...................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="07  Logged user could filter with color" name="SC7- Logged user could filter with color" time="8.487">
-<failure message="expected:&lt;8a97a8&gt; but was:&lt;[[ChromeDriver: chrome on WINDOWS (5b6094f2f6f20b0ae44ecb2c16ae1c9e)] -&gt; css selector: span[style=&quot;background-color:#8a97a8&quot;]]&gt;" type="java.lang.AssertionError"><![CDATA[Given user click in login...................................................passed
+<testcase classname="07  Logged user could filter with color" name="SC7- Logged user could filter with color" time="13.266">
+<failure message="expected:&lt;8a97a8&gt; but was:&lt;[[ChromeDriver: chrome on WINDOWS (7cf38ebfe2519b20f783b8019156a940)] -&gt; css selector: span[style=&quot;background-color:#8a97a8&quot;]]&gt;" type="java.lang.AssertionError"><![CDATA[Given user click in login...................................................passed
 And user choose category....................................................passed
 And user choose Sub_category................................................passed
 Then user can choose his favorite color.....................................failed
 
 StackTrace:
-java.lang.AssertionError: expected:<8a97a8> but was:<[[ChromeDriver: chrome on WINDOWS (5b6094f2f6f20b0ae44ecb2c16ae1c9e)] -> css selector: span[style="background-color:#8a97a8"]]]]><![CDATA[>
+java.lang.AssertionError: expected:<8a97a8> but was:<[[ChromeDriver: chrome on WINDOWS (7cf38ebfe2519b20f783b8019156a940)] -> css selector: span[style="background-color:#8a97a8"]]]]><![CDATA[>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
 	at org.junit.Assert.assertEquals(Assert.java:120)
 	at org.junit.Assert.assertEquals(Assert.java:146)
-	at stepdefination.FilterColor.user_can_choose_his_favorite_color(FilterColor.java:19)
+	at stepdefination.FilterColor.user_can_choose_his_favorite_color(FilterColor.java:20)
 	at ✽.user can choose his favorite color(file:///C:/Users/SG5530150/IdeaProjects/maven_finle/src/main/resources/fear/07_filter_with_color.feature:7)
 ]]></failure>
 </testcase>
-<testcase classname="08  Logged user could select different tags" name="SC8- Logged user could select different tags" time="9.065">
+<testcase classname="08  Logged user could select different tags" name="SC8- Logged user could select different tags" time="12.996">
 <system-out><![CDATA[Given user click in login...................................................passed
 And user choose category....................................................passed
 When click on tags..........................................................passed
 Then site open selected tag.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="09 Logged user could add different products to Shopping cart" name="SC9- Logged user could add different products to Shopping cart" time="14.817">
+<testcase classname="09 Logged user could add different products to Shopping cart" name="SC9- Logged user could add different products to Shopping cart" time="28.263">
 <system-out><![CDATA[Given user click in login...................................................passed
 And user enter valid email and Password.....................................passed
 And user click on button log in.............................................passed
@@ -76,7 +83,7 @@ And add to card.............................................................pass
 Then Ensure the item on card................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="10 SC10_add_products _Wishlist" name="SC10_add_products _Wishlist" time="13.121">
+<testcase classname="10 SC10_add_products _Wishlist" name="SC10_add_products _Wishlist" time="21.427">
 <system-out><![CDATA[Given user click in login...................................................passed
 And user enter valid email and Password.....................................passed
 And user click on button log in.............................................passed
@@ -88,50 +95,48 @@ And user select WishList....................................................pass
 Then message of adding to wishlist appear...................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="12  Create successful Order" name="Create successful Order" time="36.423">
-<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#Email&quot;}&#10;  (Session info: chrome=101.0.4951.54)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-Q8LJH2O', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [1f8e6eaf0ed2b47bd4d6ed3bba5f6907, findElement {using=id, value=Email}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\SG5530~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53523}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53523/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 1f8e6eaf0ed2b47bd4d6ed3bba5f6907" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user click in login...................................................passed
-And user enter valid email and Password.....................................failed
-And user click on button log in.............................................skipped
-When user choose category...................................................skipped
-And user choose Sub_category................................................skipped
-And user choose item........................................................skipped
-And user select size........................................................skipped
-And add to card.............................................................skipped
-And go to card..............................................................skipped
-And user click on check box read terms......................................skipped
-And user click on CHECK OUT.................................................skipped
-And user fill Billing address...............................................skipped
+<testcase classname="11 Logged user could add different products to compare list" name="Logged user could add different products to compare list" time="17.751">
+<system-out><![CDATA[Given user click in login...................................................passed
+And user enter valid email and Password.....................................passed
+And user click on button log in.............................................passed
+When user choose category...................................................passed
+And user choose Sub_category................................................passed
+And user choose item........................................................passed
+And user select size........................................................passed
+And user click on Add to compare list.......................................passed
+Then message of adding to compare list......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="12  Create successful Order" name="Create successful Order" time="26.357">
+<failure message="Cannot locate option with index: 5&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-Q8LJH2O', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given user click in login...................................................passed
+And user enter valid email and Password.....................................passed
+And user click on button log in.............................................passed
+When user choose category...................................................passed
+And user choose Sub_category................................................passed
+And user choose item........................................................passed
+And user select size........................................................passed
+And add to card.............................................................passed
+And go to card..............................................................passed
+And user click on check box read terms......................................passed
+And user click on CHECK OUT.................................................passed
+And user fill Billing address...............................................failed
 And user choose Shipping method.............................................skipped
 And user choose Payment method..............................................skipped
+And user click continue after reading Payment Info..........................skipped
+And user click on confirm...................................................skipped
+Then message 'Your order has been successfully processed!' appear...........skipped
 
 StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#Email"}
-  (Session info: chrome=101.0.4951.54)
+org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 5
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.3', revision: '7b1ebf28ef'
 System info: host: 'DESKTOP-Q8LJH2O', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1f8e6eaf0ed2b47bd4d6ed3bba5f6907, findElement {using=id, value=Email}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\SG5530~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53523}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53523/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1f8e6eaf0ed2b47bd4d6ed3bba5f6907
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
-	at stepdefination.User_Email.Email(User_Email.java:12)
-	at stepdefination.login.user_enter_valid_email_and_Password(login.java:35)
-	at ✽.user enter valid email and Password(file:///C:/Users/SG5530150/IdeaProjects/maven_finle/src/main/resources/fear/12-%20Create%20successful%20Order.feature:5)
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:301)
+	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:176)
+	at pages.Check_out_billing_page.State(Check_out_billing_page.java:19)
+	at stepdefination.successfulOrder.Billing(successfulOrder.java:42)
+	at ✽.user fill Billing address(file:///C:/Users/SG5530150/IdeaProjects/maven_finle/src/main/resources/fear/12-%20Create%20successful%20Order.feature:15)
 ]]></failure>
 </testcase>
 </testsuite>
