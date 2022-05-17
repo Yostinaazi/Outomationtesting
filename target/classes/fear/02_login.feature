@@ -6,7 +6,7 @@ Feature: 02 User could log in with valid email and password
     When user enter valid email and Password
     And user click on button log in
     Then user log in succefuly
-    And user quit chrome at end
+#    And user quit chrome at end
 
 
 

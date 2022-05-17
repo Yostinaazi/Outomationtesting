@@ -15,8 +15,8 @@ Feature:12  Create successful Order
     And  user fill Billing address
     And  user choose Shipping method
     And  user choose Payment method
-    And user click continue after reading Payment Info
-  And user click on confirm
+    And user reading Payment Info
+     And user click on confirm
   Then message 'Your order has been successfully processed!' appear
 
 #    And add adress of shipment

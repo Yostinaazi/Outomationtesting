@@ -2,6 +2,7 @@ package stepdefination;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 import pages.Item_Page;
@@ -57,7 +58,7 @@ public class successfulOrder {
     {
 payment_method.Payment_continue_button(Hooks.drive);
     }
-   @And ("user click continue after reading Payment Info")
+   @And ("user reading Payment Info")
     public void Payment_info()
 {
 payment_info.payment_info_continue_button(Hooks.drive);
@@ -70,7 +71,8 @@ payment_info.payment_info_continue_button(Hooks.drive);
     @Then("message 'Your order has been successfully processed!' appear")
     public void successfully()
     {
-
+       String success=Hooks.drive.findElement(By.cssSelector("a[href=\"/orderdetails/1031\"]")).toString();
+        Assert.assertTrue(success.contains("1031"));
     }
 
     }

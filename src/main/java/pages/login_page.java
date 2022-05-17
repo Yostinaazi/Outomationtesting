@@ -1,15 +1,17 @@
 package pages;
 
+import io.cucumber.messages.types.Hook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
+
 public class login_page {
+    user_email emil=new user_email();
 
     public void Email(WebDriver drive)
     {
-        drive.findElement(By.id("Email")).sendKeys("Yostena1@yahoo.com");
-
+    emil.email(drive);
     }
     public void Password(WebDriver drive)
     {

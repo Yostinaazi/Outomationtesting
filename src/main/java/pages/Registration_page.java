@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class Registration_page {
-
+user_email emil=new user_email();
    public void first_name(WebDriver drive)
     {   drive.findElement(By.cssSelector("input[id^=\"FirstName\"]")).sendKeys("yostena");
     }
@@ -14,7 +14,7 @@ public class Registration_page {
     }
     public void email(WebDriver drive)
     {
-     drive.findElement((By.id("Email"))).sendKeys("Yostena1@yahoo.com");
+     emil.email(drive);
     }
     public void Pass_word(WebDriver drive)
     {

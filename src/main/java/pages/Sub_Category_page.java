@@ -5,9 +5,13 @@ import org.openqa.selenium.WebDriver;
 
 public class Sub_Category_page
 {
+    public void choose_sub_category(WebDriver drive)
+    {
+        drive.findElement(By.cssSelector("img[alt=\"Picture for category Shoes\"]")).click();
+    }
     public void Filter_color(WebDriver drive)
     {
-        drive.findElement(By.cssSelector("img[alt=\"Picture for category Shoes\"][title=\"Show products in category Shoes\"]")).click();
+        drive.findElement(By.cssSelector("input[id=\"attribute-option-15\"]")).click();
     }
     public void Choose_Item(WebDriver drive)
     {

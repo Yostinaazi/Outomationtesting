@@ -4,4 +4,5 @@
       Given user click in login
       And user choose category
       And user choose Sub_category
-      Then user can choose his favorite color
+      And user filter with color
+      Then filtered items will appear

@@ -1,5 +1,6 @@
 @project
-Feature:03 Search of product
+
+Feature:04 Search of product
   Scenario: Search of product
     Given user click in login
     And user enter valid email and Password

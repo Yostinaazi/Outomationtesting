@@ -10,13 +10,22 @@ import pages.Sub_Category_page;
 public class FilterColor {
     Sub_Category_page SubCategory=new Sub_Category_page();
     @And("user choose Sub_category")
-    public  void user_choose_Sub_category() throws InterruptedException
+    public  void user_choose_Sub_category()
+    {
+        SubCategory.choose_sub_category(Hooks.drive);
+    }
+    @And ("user filter with color")
+    public void filter_with_color()
     {
         SubCategory.Filter_color(Hooks.drive);
+
     }
-    @Then("user can choose his favorite color")
+
+
+    @Then("filtered items will appear")
     public void user_can_choose_his_favorite_color()
     {
-        Assert.assertEquals("8a97a8",Hooks.drive.findElement(By.cssSelector("span[style=\"background-color:#8a97a8\"]")));
+        String color= Hooks.drive.findElement(By.cssSelector("a[title=\"Show details for adidas Consortium Campus 80s Running Shoes\"]")).toString();
+        Assert.assertTrue(color.contains("Show details for adidas Consortium Campus 80s Running Shoes"));
     }
 }
